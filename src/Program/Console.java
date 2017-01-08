@@ -33,16 +33,17 @@ public class Console{
 			Main_Encryption enc = new Main_Encryption();
 
 			System.out.println("Enter a String: ");
-			enc.Encryption(scan.nextLine());
+			System.out.println(enc.Encryption(scan.nextLine()));
 			System.out.println("\n\n");
 			menu();
 			break;
 		case 2:
 
 			Main_Decryption dec = new Main_Decryption();
-			System.out.println("Enter a J256: ");
+			System.out.println("Enter a J256: ");	
+			
+			System.out.println("Decrypted Text: "+dec.Decryption(scan.nextLine()));
 			System.out.println("\n\n");
-			dec.Decryption(scan.nextLine());
 			menu();
 			break;
 		case 3:
