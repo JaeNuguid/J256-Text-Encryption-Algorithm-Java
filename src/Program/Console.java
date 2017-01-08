@@ -34,12 +34,16 @@ public class Console{
 
 			System.out.println("Enter a String: ");
 			enc.Encryption(scan.nextLine());
-		
-			
+			System.out.println("\n\n");
+			menu();
 			break;
 		case 2:
 
 			Main_Decryption dec = new Main_Decryption();
+			System.out.println("Enter a J256: ");
+			System.out.println("\n\n");
+			dec.Decryption(scan.nextLine());
+			menu();
 			break;
 		case 3:
 			System.exit(1);
