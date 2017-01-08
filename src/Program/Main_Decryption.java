@@ -12,7 +12,29 @@ public class Main_Decryption {
 	
 	public String Decryption(String x){
 		
+		Sub_Decryption sd = new Sub_Decryption();
+		char[] dec = x.toCharArray(); 
+		int j = x.indexOf("|J|");
+		String jj="",bb="";
+		for(int o=0; o<j;o++){
+			jj+=dec[o];
+		}
+		int key = Integer.parseInt(jj);
+		
+		for(int o=j+3; o< x.length(); o++){
+			bb+=dec[o];
+		}
+		
+		char[]c = sd.Decryption(key, bb.toCharArray());
+		
+		x="";
+		for(int d = 0; d < c.length; d++){
+			x+=c[d];
+		}
+		
+		
 		String[] splitted = x.split(" ");
+			
 		
 		String rel ="";
 		

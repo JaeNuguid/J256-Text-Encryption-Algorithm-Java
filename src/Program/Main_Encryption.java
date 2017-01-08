@@ -43,7 +43,15 @@ public class Main_Encryption {
 				out+=" ";
 			}
 		}
-		return out;
+		
+		
+		Sub_Encryption se = new Sub_Encryption();
+		char[] z = se.Encryption(out.toCharArray());
+		out="";
+		for(int c=0;c < z.length;c++){
+			out+=z[c];
+		}
+		return se.key+"|J|"+out;
 	}
 	
 	public int getIndex(char x){
