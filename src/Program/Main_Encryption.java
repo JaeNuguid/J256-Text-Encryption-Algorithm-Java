@@ -1,17 +1,37 @@
+
+/**
+* The Main_Encryption class contains the main algorithm 
+* for J256's encryption.
+*
+* @author  Jae Allen Reyes Nuguid
+* @version 1.0
+* @since   01-09-2017 
+*/
+
+
 package Program;
 
 import java.nio.charset.spi.CharsetProvider;
 import java.util.ArrayList;
 
+
 public class Main_Encryption {
 	
+	// Initial set of characters
 	char[] Zs = {'|','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'
 			,'P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e',
 			'f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','.',
 			'0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','_','+','-','=','/'
 			,'`','~',':',';','"','\'','<','>','?','/'};
 	
+	
+	
+	
+	//Function: Encryption
+	//Encrypts a string using permutation and combination. Outputs a String(encrypted text).
 	public String Encryption(String x){
+		
+		if(x.contains("|J|")) return "error";
 
 		ArrayList<String> twos = new ArrayList<String>();
 		
@@ -54,6 +74,8 @@ public class Main_Encryption {
 		return se.key+"|J|"+out;
 	}
 	
+	//Function: getIndex
+	//Identifies and returns the corresponding index of a character.
 	public int getIndex(char x){
 		int index =0;
 		for(int z=0; z< Zs.length; z++){ 	

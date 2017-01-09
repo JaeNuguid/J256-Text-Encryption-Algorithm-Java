@@ -1,15 +1,29 @@
+
+/**
+* The Main_Decryption class contains the main algorithm 
+* for J256's decryption.
+*
+* @author  Jae Allen Reyes Nuguid
+* @version 1.0
+* @since   01-09-2017 
+*/
+
 package Program;
 
 import java.util.ArrayList;
 
 public class Main_Decryption {
 
+	// Initial set of characters
 	char[] Zs = {'|','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'
 			,'P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e',
 			'f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ',',','.',
 			'0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','_','+','-','=','/'
 			,'`','~',':',';','"','\'','<','>','?','/'};
 	
+
+	//Function: Decryption
+	//Decrypts a J256 using permutation and combination techniques. Outputs a String(decrypted text).	
 	public String Decryption(String x){
 		
 		Sub_Decryption sd = new Sub_Decryption();
@@ -64,6 +78,8 @@ public class Main_Decryption {
 		
 	}
 	
+	//Function: reSpace
+	//Identifies the spaces within the encrypted text and replace it.
 	public String reSpace(String x){
 		char[] l = x.toCharArray();
 		for(int z=0;z<l.length;z++)
@@ -76,6 +92,8 @@ public class Main_Decryption {
 	}
 	
 	
+	//Function: getChar
+	//Returns the corresponding character by its index.
 	public char getChar(int x){
 		return Zs[x];
 

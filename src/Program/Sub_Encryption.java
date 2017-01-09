@@ -1,9 +1,24 @@
+
+/**
+* The Sub_Encryption class contains the shifting algorithm 
+* and key generation for J256's encryption.
+*
+* @author  Jae Allen Reyes Nuguid
+* @version 1.0
+* @since   01-09-2017 
+*/
+
+
 package Program;
 
 public class Sub_Encryption {
 
 	public int key =0, key0 = 0;;
 	char[] x;
+	
+
+	//Function: Encryption
+	//Genearates a key, encrypts the semi-encrypted J256, returns a String(encrypted text).
 	public char[] Encryption(char[] x){
 		this.x = x;
 		
@@ -18,6 +33,8 @@ public class Sub_Encryption {
 		return x;		
 	}
 	
+	//Function: jShifter
+	//Shifts the characters to its corresponding number of loop.
 	 public void jShifter(char[] p)
      {
         
@@ -65,6 +82,8 @@ public class Sub_Encryption {
              }
          }
 	
+	 //Function: generateKey
+	 //Generates and returns an integer ranging from 32 to 256.
 	public int generateKey(){
 		return (int)(Math.random()*256)+32;
 				

@@ -32,7 +32,7 @@ public class Console{
 		case 1:
 			Main_Encryption enc = new Main_Encryption();
 
-			System.out.println("Enter a String: ");
+			System.out.print("Enter a String: ");
 			System.out.println(enc.Encryption(scan.nextLine()));
 			System.out.println("\n\n");
 			menu();

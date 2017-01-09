@@ -1,3 +1,13 @@
+
+/**
+* The Sub_Encryption class contains the reverse
+* shifting algorithm for J256's encryption.
+*
+* @author  Jae Allen Reyes Nuguid
+* @version 1.0
+* @since   01-09-2017 
+*/
+
 package Program;
 
 public class Sub_Decryption {
@@ -5,6 +15,9 @@ public class Sub_Decryption {
 
 	int key =0, key0 = 0;;
 	char[] x;
+	
+	//Function: Decryption
+	//Decrypts the text and returns a String.
 	public char[] Decryption(int key, char[] x){
 		this.x = x;
 		this.key = key;
@@ -18,6 +31,8 @@ public class Sub_Decryption {
 		return x;	
 	}
 	
+	//Function: jShifter
+	//Shifts the characters to its corresponding number of loop.
 	public void jShifter(char[] p)
     {
         for (int x = 0; x < p.length; x++)
