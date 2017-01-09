@@ -24,6 +24,8 @@ public class Main_Encryption {
 			'0','1','2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','_','+','-','=','/'
 			,'`','~',':',';','"','\'','<','>','?','/'};
 	
+	//Possible upgrade for this algorithm lies within this set of characters.
+	//Changing the initial set's arrangement by its corresponding key.
 	
 	
 	
