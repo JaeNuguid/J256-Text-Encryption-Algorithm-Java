@@ -73,7 +73,7 @@ public class Main_Decryption {
 			
 			
 		}
-		String out = reSpace(rel);
+		String out = reSpace(rel).trim();
 		return out;
 		
 	}

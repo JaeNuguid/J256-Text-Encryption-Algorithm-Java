@@ -73,7 +73,9 @@ public class Main_Encryption {
 		for(int c=0;c < z.length;c++){
 			out+=z[c];
 		}
-		return se.key+"|J|"+out;
+		
+		String J256 =se.key+"|J|"+out;
+		return J256.trim();
 	}
 	
 	//Function: getIndex
