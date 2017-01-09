@@ -13,7 +13,7 @@ package Program;
 public class Sub_Decryption {
 	
 
-	int key =0, key0 = 0;;
+	int key =0, key0 = 0;
 	char[] x;
 	
 	//Function: Decryption
